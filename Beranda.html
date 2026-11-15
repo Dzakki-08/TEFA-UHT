@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -9,7 +10,6 @@
 </head>
 
 <body>
-  <!-- ===== TOP BAR: strip tipis biru tua paling atas ===== -->
   <div class="topbar">
     <div class="container topbar__inner">
       <span>POLITEKNIK NEGERI JEMBER</span>
@@ -17,22 +17,18 @@
     </div>
   </div>
 
-  <!-- ===== NAVBAR: logo + menu navigasi ===== -->
   <header class="navbar">
     <div class="container navbar__inner">
 
-      <!-- Logo; diklik kembali ke Beranda -->
       <a href="Beranda.html" class="logo">
         <strong>TEFA UHT</strong>
         <small>Unit Produksi Susu · Polije</small>
       </a>
 
-      <!-- Tombol hamburger (hanya tampil di HP); dikontrol script.js lewat id="navToggle" -->
       <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <!-- Menu navigasi; class "active" = halaman yang sedang dibuka -->
       <nav class="nav" id="nav">
         <a href="Beranda.html" class="active">Beranda</a>
         <a href="tentang.html">Tentang Kami</a>
@@ -45,43 +41,30 @@
   </header>
 
   <main>
-
-    <!-- ===== HERO: banner dengan foto latar penuh + teks di atasnya ===== -->
     <section class="hero">
-      <!-- Foto latar: dipasang memenuhi seluruh banner; alt = teks pengganti jika gambar gagal dimuat -->
       <img class="hero__bg" src="foto/BANNER.webp" alt="Banner TEFA UHT">
-      <!-- Lapisan warna biru transparan di atas foto agar teks putih mudah dibaca -->
       <div class="hero__overlay"></div>
 
-      <!-- Teks hero (posisinya di atas foto dan overlay) -->
       <div class="container hero__content">
         <p class="eyebrow eyebrow--light">TEACHING FACTORY · POLIJE</p>
-        <!-- <h1> = judul utama halaman -->
         <h1>Inovasi Pengolahan Susu untuk Masa Depan</h1>
         <p class="hero__desc">Menghubungkan pendidikan vokasi, produksi, dan pengembangan produk susu dalam satu ekosistem pembelajaran nyata.</p>
-        <!-- <span class="line"> = garis kecil dekoratif di kiri tagline -->
         <p class="hero__tagline"><span class="line"></span>Belajar. Berinovasi. Berproduksi.</p>
       </div>
     </section>
 
-    <!-- ===== TENTANG: foto kiri, penjelasan kanan ===== -->
     <section class="about container">
-      <!-- Foto kegiatan dengan sudut membulat -->
       <div class="img-box about__img"><img src="foto/Bernada1.jpeg" alt="Kegiatan mahasiswa di TEFA UHT"></div>
       <div class="about__text">
         <p class="eyebrow">TENTANG TEFA UHT</p>
         <h2>Ruang belajar dengan pengalaman industri nyata.</h2>
         <p>TEFA UHT merupakan wadah pembelajaran berbasis produksi di Politeknik Negeri Jember. Mahasiswa mengenal proses pengolahan susu, praktik mutu, dan pengembangan produk melalui kegiatan yang terarah.</p>
-        <!-- Link bergaya tombol (class "btn"); "arrow" = ikon panah -->
         <a href="tentang.html" class="btn btn--outline">Profil TEFA <span class="arrow">→</span></a>
       </div>
     </section>
 
-    <!-- ===== PRODUK: 4 kartu produk ===== -->
     <section class="products">
       <div class="container">
-
-        <!-- Judul bagian + tombol katalog -->
         <div class="products__head">
           <div>
             <h2>Kreasi dari pengolahan susu</h2>
@@ -90,22 +73,18 @@
           <a href="produk.html" class="btn btn--outline">Katalog Produk <span class="arrow">→</span></a>
         </div>
 
-        <!-- Wadah kartu (4 kolom dengan CSS Grid) -->
         <div class="cards">
-
-          <!-- <article> = satu kartu produk yang berdiri sendiri -->
           <article class="card">
-            <div class="img-box card__img"><img src="img/susu.jpg" alt="Susu UHT"></div>
+            <div class="img-box card__img"><img src="foto/susu ori.jpg" alt="Susu UHT"></div>
             <div class="card__body">
               <h3>Susu UHT</h3>
               <p>Praktis untuk keseharian</p>
-              <!-- Tanda # mengarah ke bagian tertentu di halaman produk -->
               <a href="produk.html#susu-uht">Lihat di katalog <span class="arrow">→</span></a>
             </div>
           </article>
 
           <article class="card">
-            <div class="img-box card__img"><img src="img/yoghurt.jpg" alt="Yoghurt"></div>
+            <div class="img-box card__img"><img src="foto/susu straw.jpg" alt="Yoghurt"></div>
             <div class="card__body">
               <h3>Yoghurt</h3>
               <p>Kreasi susu fermentasi</p>
@@ -114,7 +93,7 @@
           </article>
 
           <article class="card">
-            <div class="img-box card__img"><img src="img/keju.jpg" alt="Keju"></div>
+            <div class="img-box card__img"><img src="foto/susu uht.avif" alt="Keju"></div>
             <div class="card__body">
               <h3>Keju</h3>
               <p>Peluang kreasi kuliner</p>
@@ -123,7 +102,7 @@
           </article>
 
           <article class="card">
-            <div class="img-box card__img"><img src="img/eskrim.jpg" alt="Es krim"></div>
+            <div class="img-box card__img"><img src="foto/susu steril.jpeg" alt="Es krim"></div>
             <div class="card__body">
               <h3>Es Krim</h3>
               <p>Lembut di setiap gigitan</p>
@@ -134,7 +113,6 @@
       </div>
     </section>
 
-    <!-- ===== CTA: banner ajakan berkolaborasi ===== -->
     <section class="container cta-wrap">
       <div class="cta">
         <div>
@@ -146,18 +124,14 @@
     </section>
   </main>
 
-  <!-- ===== FOOTER: bagian bawah berlatar biru tua (3 kolom) ===== -->
   <footer class="footer">
     <div class="container footer__grid">
-
-      <!-- Kolom 1: profil & alamat -->
       <div class="footer__brand">
         <h4>TEFA UHT</h4>
         <p>Teaching Factory UHT Produksi Susu Politeknik Negeri Jember. Ruang belajar, produksi, dan kolaborasi pengolahan susu.</p>
         <p class="footer__addr">Jl. Mastrip, Jember, Jawa Timur</p>
       </div>
 
-      <!-- Kolom 2: daftar link (<ul> = daftar, <li> = item) -->
       <div>
         <h5>Jelajahi</h5>
         <ul class="footer__links">
@@ -170,7 +144,6 @@
         </ul>
       </div>
 
-      <!-- Kolom 3: kontak; <br> = pindah baris -->
       <div>
         <h5>Mari terhubung</h5>
         <p class="footer__contact">Telepon contoh: 0331 000 000<br>Email contoh: tefa-uht@example.com<br>Bukan kontak resmi / ke verifikasi.</p>

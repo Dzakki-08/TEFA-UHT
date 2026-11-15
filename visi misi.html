@@ -1,41 +1,29 @@
 <!DOCTYPE html>
-<!-- Menandakan bahwa dokumen ini adalah HTML5 -->
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Judul yang muncul di tab browser -->
   <title>Visi &amp; Misi - Tentang Kami - TEFA UHT</title>
-
-  <!-- Memanggil file CSS halaman ini (desain/tampilan) -->
   <link rel="stylesheet" href="visi misi.css">
 </head>
-
 <body>
-
-  <!-- ===== TOP BAR (sama seperti Beranda) ===== -->
   <div class="topbar">
     <div class="container topbar__inner">
       <span>POLITEKNIK NEGERI JEMBER</span>
       <span>Pendidikan vokasi · Inovasi · Kolaborasi</span>
     </div>
   </div>
-
-  <!-- ===== NAVBAR (sama seperti Beranda; yang "active" sekarang Tentang Kami) ===== -->
   <header class="navbar">
     <div class="container navbar__inner">
       <a href="Beranda.html" class="logo">
         <strong>TEFA UHT</strong>
         <small>Unit Produksi Susu · Polije</small>
       </a>
-
       <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="nav" id="nav">
         <a href="Beranda.html">Beranda</a>
-        <!-- aria-current="page" = memberi tahu pembaca layar bahwa ini halaman yang sedang dibuka -->
         <a href="tentang.html" class="active" aria-current="page">Tentang Kami</a>
         <a href="produk.html">Produk</a>
         <a href="layanan.html">Layanan</a>
@@ -44,13 +32,9 @@
       </nav>
     </div>
   </header>
-
   <main>
-
-    <!-- ===== HEADER HALAMAN: pita biru muda berisi breadcrumb, judul, deskripsi ===== -->
     <section class="page-header">
       <div class="container">
-        <!-- Breadcrumb = jejak posisi halaman: Beranda / Tentang Kami -->
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="Beranda.html">Beranda</a>
           <span>/</span>
@@ -60,28 +44,18 @@
         <p>Mengenal ruang pembelajaran, produksi, dan inovasi susu di Politeknik Negeri Jember.</p>
       </div>
     </section>
-
-    <!-- ===== SUBNAV: menu di tengah halaman yang menghubungkan sub halaman "Tentang Kami" =====
-         Tiap pilihan adalah LINK ke file HTML sendiri; class "active" = sub halaman yang sedang dibuka.
-         Gayanya (.subnav) ada di visi-misi.css. -->
     <section class="container subpage">
       <nav class="subnav" aria-label="Sub halaman Tentang Kami">
         <a href="tentang.html" class="subnav__link">Profil TEFA</a>
         <a href="visi misi.html" class="subnav__link active" aria-current="page">Visi &amp; Misi</a>
       </nav>
-
-      <!-- ===== ISI SUB HALAMAN: VISI & MISI ===== -->
         <div class="vision">
-
-          <!-- Kolom kiri: kotak biru tua berisi Visi -->
           <div class="vision__main">
             <p class="eyebrow eyebrow--light">ARAH PENGEMBANGAN</p>
             <h2>Visi</h2>
             <p class="vision__text">Menjadi ruang pembelajaran vokasi pengolahan susu yang adaptif, berorientasi mutu, dan mendorong inovasi melalui kolaborasi.</p>
             <p class="vision__note">Rumusan narasi untuk konsep website; bukan kutipan dokumen visi resmi institusi.</p>
           </div>
-
-          <!-- Kolom kanan: daftar Misi. <ol> = daftar berurutan; <li> = satu poin misi -->
           <div class="mission">
             <h2>Misi</h2>
             <ol class="mission__list">
@@ -93,8 +67,6 @@
           </div>
         </div>
     </section>
-
-    <!-- ===== CTA: ajakan menghubungi  ===== -->
     <section class="container cta-wrap">
       <div class="cta">
         <div>
@@ -105,8 +77,6 @@
       </div>
     </section>
   </main>
-
-  <!-- ===== FOOTER (sama seperti Beranda) ===== -->
   <footer class="footer">
     <div class="container footer__grid">
       <div class="footer__brand">
@@ -134,8 +104,6 @@
       © <span id="year">2026</span> TEFA UHT · Politeknik Negeri Jember. Konsep website institusional. Foto dan produk merupakan ilustrasi; informasi contoh ditandai pada halaman terkait.
     </div>
   </footer>
-
-  <!-- Memanggil file JavaScript halaman ini (menu hamburger, tahun, animasi) -->
   <script src="visi misi.js"></script>
 </body>
 </html>

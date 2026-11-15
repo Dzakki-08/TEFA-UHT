@@ -1,45 +1,21 @@
-/* =====================================================
-   tentang.css - SELURUH CSS untuk halaman Tentang Kami (Profil TEFA)
-   Dipanggil di HTML lewat: <link rel="stylesheet" href="tentang.css">
-   File ini berdiri sendiri (tidak butuh style.css), berisi:
-   A. Bagian umum: variabel warna, reset, top bar, navbar, tombol, banner CTA, footer,
-      pita judul halaman, dan subnav.
-   B. Bagian khusus halaman ini (di paling bawah).
-   ===================================================== */
-
-/* Memuat font Inter dari Google Fonts (@import harus di paling atas file CSS).
-   Butuh internet; jika offline, browser memakai font cadangan. */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-
-/* ################ A. BAGIAN UMUM ################ */
-
-/* ===== VARIABEL WARNA =====
-   :root = tempat menyimpan nilai yang dipakai berulang.
-   Dipakai dengan var(--nama). Ganti di sini, semua ikut berubah. */
 :root {
-  --navy: #0b2f5e;       /* biru tua utama */
-  --navy-dark: #082548;  /* biru tua untuk top bar */
-  --blue: #1560a8;       /* biru terang untuk tombol & link */
-  --blue-soft: #eef4fb;  /* biru sangat muda untuk banner CTA */
-  --text: #1c2b3a;       /* warna teks utama */
-  --muted: #5d6b7a;      /* warna teks abu-abu */
-  --line: #dde4ec;       /* warna garis/border */
-  --bg-soft: #f6f8fb;    /* abu-abu muda untuk latar bagian produk */
+  --navy: #0b2f5e;
+  --navy-dark: #082548;
+  --blue: #1560a8;
+  --blue-soft: #eef4fb;
+  --text: #1c2b3a;
+  --muted: #5d6b7a;
+  --line: #dde4ec;
+  --bg-soft: #f6f8fb;
   --white: #ffffff;
 }
 
-
-/* ===== RESET & PENGATURAN DASAR ===== */
-
-/* * = semua elemen. margin & padding dinolkan agar sama di semua browser.
-   box-sizing: border-box = lebar elemen sudah termasuk padding & border. */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Scroll halus saat klik link ke bagian halaman (#) */
 html { scroll-behavior: smooth; }
 
-/* Pengaturan seluruh halaman: font, warna teks, jarak antar baris */
 body {
   font-family: "Inter", system-ui, sans-serif;
   color: var(--text);
@@ -48,109 +24,76 @@ body {
   font-size: 15px;
 }
 
-/* Gambar memenuhi kotaknya; object-fit: cover = dipotong rapi, tidak gepeng */
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
-/* Link tanpa garis bawah dan mewarisi warna teks sekitarnya */
 a { color: inherit; text-decoration: none; }
 
-/* Daftar <ul> tanpa titik */
 ul { list-style: none; }
 
-/* .container = membatasi lebar konten maksimal 1100px dan menengahkannya */
 .container { width: min(1100px, 100% - 48px); margin-inline: auto; }
 
-/* Garis biru saat elemen dipilih lewat keyboard (Tab) */
 :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
 
-
-/* ===== TOP BAR (strip biru tua paling atas) ===== */
 .topbar { background: var(--navy-dark); color: #cfdcec; font-size: 11px; padding: 6px 0; }
-/* display: flex + space-between = dua teks ada di kiri dan kanan */
+
 .topbar__inner { display: flex; justify-content: space-between; gap: 16px; }
 
-
-/* ===== NAVBAR (logo + menu) ===== */
-/* position: sticky = navbar menempel di atas saat halaman di-scroll */
 .navbar { background: var(--white); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
-/* Logo di kiri, menu di kanan, sejajar vertikal di tengah */
+
 .navbar__inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
 
-/* Logo: dua baris (nama + subjudul) disusun atas-bawah */
 .logo { display: flex; flex-direction: column; line-height: 1.2; }
 .logo strong { font-size: 18px; color: var(--navy); font-weight: 700; }
 .logo small { font-size: 10px; color: var(--muted); }
 
-/* Menu: link berjajar ke samping dengan jarak 28px */
 .nav { display: flex; gap: 28px; font-size: 13px; font-weight: 500; }
-/* border-bottom transparan disiapkan agar menu aktif tidak "melompat" */
+
 .nav a { padding: 22px 0 18px; border-bottom: 2px solid transparent; transition: color .2s; }
 .nav a:hover { color: var(--blue); }
-/* Menu halaman yang sedang dibuka: tebal + garis bawah */
+
 .nav a.active { color: var(--navy); font-weight: 600; border-bottom-color: var(--navy); }
 
-/* Tombol hamburger: disembunyikan di desktop (ditampilkan di bagian responsif) */
 .nav-toggle { display: none; background: none; border: 0; width: 40px; height: 40px; cursor: pointer; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
 .nav-toggle span { width: 22px; height: 2px; background: var(--navy); transition: transform .25s, opacity .25s; }
-/* Saat menu terbuka, 3 garis berubah jadi tanda X */
+
 .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* Kotak gambar: warna cadangan jika foto belum ada */
 .img-box { background: linear-gradient(135deg, #c9d6e4, #e3eaf2); overflow: hidden; position: relative; }
 
-
-
-/* ===== TOMBOL ===== */
 .btn { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; padding: 9px 18px; border-radius: 6px; border: 1px solid var(--line); transition: background .2s, border-color .2s, color .2s; }
-.btn--outline { background: var(--white); color: var(--navy); }       /* tombol putih bergaris */
+.btn--outline { background: var(--white); color: var(--navy); }
 .btn--outline:hover { border-color: var(--blue); color: var(--blue); }
-.btn--primary { background: var(--blue); color: var(--white); border-color: var(--blue); }  /* tombol biru penuh */
+.btn--primary { background: var(--blue); color: var(--white); border-color: var(--blue); }
 .btn--primary:hover { background: var(--navy); border-color: var(--navy); }
-/* Panah bergeser sedikit ke kanan saat tombol di-hover */
+
 .arrow { transition: transform .2s; }
 .btn:hover .arrow { transform: translateX(3px); }
 
-
-
-/* ===== CTA (banner ajakan berkolaborasi) ===== */
 .cta-wrap { padding: 40px 0; }
 .cta { display: flex; justify-content: space-between; align-items: center; gap: 24px; background: var(--blue-soft); border: 1px solid #d9e7f5; border-radius: 10px; padding: 24px 28px; }
 .cta h3 { font-size: 17px; color: var(--navy); font-weight: 700; }
 .cta p { font-size: 12px; color: var(--muted); }
 
-
-/* ===== FOOTER ===== */
 .footer { background: var(--navy); color: #cfdcec; padding-top: 36px; }
-/* 3 kolom dengan lebar berbeda (1.4 : 1.2 : 1) */
+
 .footer__grid { display: grid; grid-template-columns: 1.4fr 1.2fr 1fr; gap: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(255, 255, 255, .12); }
 .footer h4 { font-size: 17px; color: var(--white); margin-bottom: 10px; }
 .footer h5 { font-size: 11px; color: var(--white); margin-bottom: 10px; }
 .footer p, .footer li { font-size: 11px; }
 .footer__addr { margin-top: 14px; }
-/* Link footer disusun 2 kolom */
+
 .footer__links { display: grid; grid-template-columns: repeat(2, auto); justify-content: start; gap: 6px 22px; }
 .footer__links a:hover { color: var(--white); text-decoration: underline; }
 .footer__bottom { font-size: 9px; padding: 16px 0 24px; color: #a8bcd6; }
 
-
-
-
-/* =====================================================
-   SUB HALAMAN (dipakai semua halaman dalam: Tentang Kami, Produk, dll)
-   Berisi: pita judul halaman + subnav (menu di tengah halaman).
-   ===================================================== */
-
-/* ===== HEADER HALAMAN (pita biru muda berisi breadcrumb, judul, deskripsi) ===== */
 .page-header { background: var(--blue-soft); padding: 28px 0 36px; }
 .breadcrumb { display: flex; gap: 8px; font-size: 11px; color: var(--muted); margin-bottom: 14px; }
 .breadcrumb a:hover { color: var(--blue); text-decoration: underline; }
 .page-header h1 { font-size: clamp(28px, 3vw, 40px); color: var(--navy); font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
 .page-header p { font-size: 13px; color: var(--muted); max-width: 40em; }
 
-/* ===== SUBNAV (menu di tengah halaman, menghubungkan sub halaman) =====
-   Tiap pilihan adalah link <a> ke file HTML sendiri. */
 .subpage { padding-top: 28px; }
 .subnav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
 .subnav__link {
@@ -160,83 +103,56 @@ ul { list-style: none; }
   transition: background .2s, color .2s;
 }
 .subnav__link:hover { color: var(--navy); }
-.subnav__link.active { background: var(--blue); color: var(--white); }   /* sub halaman yang sedang dibuka */
+.subnav__link.active { background: var(--blue); color: var(--white); }
 
-
-/* ===== LABEL KECIL DI ATAS JUDUL (eyebrow) =====
-   Contoh: "PENDIDIKAN BERBASIS PRODUKSI", "ARAH PENGEMBANGAN".
-   eyebrow--light = versi terang untuk latar biru tua. */
 .eyebrow { font-size: 9px; font-weight: 600; letter-spacing: .06em; color: var(--blue); margin-bottom: 10px; }
 .eyebrow--light { color: #c4d6ec; }
 
-
-/* ===== RESPONSIF BAGIAN UMUM (navbar, footer, banner CTA) =====
-   @media (max-width: ...) = aturan di dalamnya hanya berlaku jika lebar layar
-   lebih kecil dari angka tersebut. */
-
-/* Tablet */
 @media (max-width: 900px) {
   .footer__grid { grid-template-columns: 1fr 1fr; }
-  .footer__brand { grid-column: 1 / -1; }                    /* kolom 1 selebar penuh */
+  .footer__brand { grid-column: 1 / -1; }
 }
 
-/* HP */
 @media (max-width: 760px) {
   .topbar__inner span:last-child { display: none; }
-  .nav-toggle { display: flex; }                              /* munculkan tombol hamburger */
-  /* Menu jadi daftar vertikal di bawah navbar, tersembunyi sampai diberi class "open" oleh JS */
+  .nav-toggle { display: flex; }
+
   .nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--line); flex-direction: column; gap: 0; padding: 8px 24px 14px; display: none; }
   .nav.open { display: flex; }
   .nav a { padding: 12px 0; border-bottom: 1px solid var(--line); }
   .cta { flex-direction: column; align-items: flex-start; }
 }
 
-/* HP kecil */
 @media (max-width: 480px) {
   .footer__grid { grid-template-columns: 1fr; }
 }
 
-/* Hormati pengguna yang mematikan animasi di perangkatnya */
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
 
-
-/* ################ B. KHUSUS HALAMAN TENTANG KAMI (PROFIL TEFA) ################ */
-
-/* ===== PROFIL: teks di kiri, foto di kanan ===== */
 .profile { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .profile__text h2 { font-size: 26px; line-height: 1.3; color: var(--navy); margin-bottom: 16px; font-weight: 700; max-width: 12em; }
 .profile__text p:not(.eyebrow) { font-size: 12.5px; color: var(--muted); line-height: 1.75; margin-bottom: 14px; }
 .profile__img { border-radius: 10px; aspect-ratio: 4 / 3.2; }
 
-
-/* ===== EKOSISTEM: 3 kartu berikon ===== */
 .features { padding: 52px 0 8px; }
 .features h2 { font-size: 22px; color: var(--navy); font-weight: 700; margin-bottom: 20px; }
 .features__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .feature { background: var(--blue-soft); border-radius: 8px; padding: 20px 22px 22px; }
-/* Ikon SVG: fill none + stroke = hanya garis tepi berwarna navy */
+
 .feature__icon { width: 18px; height: 18px; fill: none; stroke: var(--navy); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 14px; }
 .feature h3 { font-size: 14px; color: var(--navy); font-weight: 700; margin-bottom: 6px; }
 .feature p { font-size: 11px; color: var(--muted); line-height: 1.7; }
 
-
-/* ===== ANIMASI MUNCUL (dipakai oleh tentang.js) =====
-   Class "reveal" ditambahkan oleh JS; kartu mulai transparan dan sedikit turun.
-   Class "show" ditambahkan saat kartu terlihat di layar, lalu kartu muncul halus.
-   --delay = jeda antar kartu (diatur JS). */
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; transition-delay: var(--delay, 0s); }
 .reveal.show { opacity: 1; transform: none; }
 
-
-/* ===== RESPONSIF ===== */
 @media (max-width: 900px) {
   .profile { grid-template-columns: 1fr; gap: 28px; }
   .features__grid { grid-template-columns: 1fr; }
 }
 
-/* Hormati pengguna yang mematikan animasi */
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
 }

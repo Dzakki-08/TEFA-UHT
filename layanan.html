@@ -1,41 +1,29 @@
 <!DOCTYPE html>
-<!-- Menandakan bahwa dokumen ini adalah HTML5 -->
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Judul yang muncul di tab browser -->
   <title>Layanan - Jasa Trial/R&amp;D - TEFA UHT</title>
-
-  <!-- Memanggil file CSS halaman ini (desain/tampilan) -->
   <link rel="stylesheet" href="layanan.css">
 </head>
-
 <body>
-
-  <!-- ===== TOP BAR (sama seperti halaman lain) ===== -->
   <div class="topbar">
     <div class="container topbar__inner">
       <span>POLITEKNIK NEGERI JEMBER</span>
       <span>Pendidikan vokasi · Inovasi · Kolaborasi</span>
     </div>
   </div>
-
-  <!-- ===== NAVBAR (sama seperti Beranda; yang "active" sekarang Tentang Kami) ===== -->
   <header class="navbar">
     <div class="container navbar__inner">
       <a href="Beranda.html" class="logo">
         <strong>TEFA UHT</strong>
         <small>Unit Produksi Susu · Polije</small>
       </a>
-
       <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="nav" id="nav">
         <a href="Beranda.html">Beranda</a>
-        <!-- aria-current="page" = memberi tahu pembaca layar bahwa ini halaman yang sedang dibuka -->
         <a href="tentang.html">Tentang Kami</a>
         <a href="produk.html">Produk</a>
         <a href="layanan.html" class="active" aria-current="page">Layanan</a>
@@ -44,10 +32,7 @@
       </nav>
     </div>
   </header>
-
   <main>
-
-    <!-- ===== HEADER HALAMAN: pita biru muda berisi breadcrumb, judul, deskripsi ===== -->
     <section class="page-header">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -59,17 +44,12 @@
         <p>Dukungan untuk eksplorasi produk, penelitian terapan, dan kolaborasi pengolahan susu.</p>
       </div>
     </section>
-
-    <!-- ===== SUBNAV: menu di tengah halaman yang menghubungkan 3 sub halaman Layanan =====
-         Tiap pilihan adalah LINK ke file HTML sendiri; class "active" = sub halaman yang sedang dibuka. -->
     <section class="container subpage">
       <nav class="subnav" aria-label="Sub halaman Layanan">
         <a href="layanan.html" class="subnav__link active" aria-current="page">Jasa Trial/R&amp;D</a>
-        <a href="kerjasama.html" class="subnav__link">Kerja Sama</a>
+        <a href="kerja sama.html" class="subnav__link">Kerja Sama</a>
         <a href="magang.html" class="subnav__link">Informasi Magang</a>
       </nav>
-
-      <!-- ===== PENGANTAR: teks di kiri, foto di kanan ===== -->
       <div class="service-intro">
         <div class="service-intro__text">
           <p class="eyebrow">EKSPLORASI &amp; PENGEMBANGAN</p>
@@ -77,11 +57,9 @@
           <p>Ruang diskusi dan uji coba pengolahan susu untuk menelaah formulasi serta pendekatan proses. Rencana trial disusun bersama sesuai tujuan, kebutuhan bahan, dan kesiapan fasilitas.</p>
         </div>
         <figure class="service-intro__figure">
-          <div class="img-box service-intro__img"><img src="img/trial-rnd.jpg" alt="Ruang produksi susu dengan tangki pengolahan"></div>
+          <div class="img-box service-intro__img"><img src="foto/trial.jpg" alt="Ruang produksi susu dengan tangki pengolahan"></div>
         </figure>
       </div>
-
-      <!-- ===== MANFAAT LAYANAN: 3 kartu berikon centang ===== -->
       <section class="block">
         <h2>Manfaat layanan</h2>
         <div class="benefits__grid">
@@ -102,8 +80,6 @@
           </article>
         </div>
       </section>
-
-      <!-- ===== ALUR: 4 langkah bernomor (<ol> = daftar berurutan) ===== -->
       <section class="block">
         <h2>Cara mengajukan kegiatan</h2>
         <ol class="steps__grid">
@@ -130,8 +106,6 @@
         </ol>
       </section>
     </section>
-
-    <!-- ===== KOTAK "SEBELUM MENGHUBUNGI KAMI": panduan singkat + tombol ===== -->
     <section class="container cta-wrap">
       <div class="cta cta--info">
         <div>
@@ -143,8 +117,6 @@
       </div>
     </section>
   </main>
-
-  <!-- ===== FOOTER (sama seperti halaman lain) ===== -->
   <footer class="footer">
     <div class="container footer__grid">
       <div class="footer__brand">
@@ -172,8 +144,6 @@
       © <span id="year">2026</span> TEFA UHT · Politeknik Negeri Jember. Konsep website institusional. Foto dan produk merupakan ilustrasi; informasi contoh ditandai pada halaman terkait.
     </div>
   </footer>
-
-  <!-- Memanggil file JavaScript halaman ini (menu hamburger, tahun, animasi) -->
   <script src="layanan.js"></script>
 </body>
 </html>

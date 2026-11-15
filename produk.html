@@ -1,41 +1,29 @@
 <!DOCTYPE html>
-<!-- Menandakan bahwa dokumen ini adalah HTML5 -->
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Judul yang muncul di tab browser -->
   <title>Katalog Produk - TEFA UHT</title>
-
-  <!-- Memanggil file CSS halaman ini (desain/tampilan) -->
   <link rel="stylesheet" href="produk.css">
 </head>
-
 <body>
-
-  <!-- ===== TOP BAR (sama seperti halaman lain) ===== -->
   <div class="topbar">
     <div class="container topbar__inner">
       <span>POLITEKNIK NEGERI JEMBER</span>
       <span>Pendidikan vokasi · Inovasi · Kolaborasi</span>
     </div>
   </div>
-
-  <!-- ===== NAVBAR (sama seperti Beranda; yang "active" sekarang Tentang Kami) ===== -->
   <header class="navbar">
     <div class="container navbar__inner">
       <a href="Beranda.html" class="logo">
         <strong>TEFA UHT</strong>
         <small>Unit Produksi Susu · Polije</small>
       </a>
-
       <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="nav" id="nav">
         <a href="Beranda.html">Beranda</a>
-        <!-- aria-current="page" = memberi tahu pembaca layar bahwa ini halaman yang sedang dibuka -->
         <a href="tentang.html">Tentang Kami</a>
         <a href="produk.html" class="active" aria-current="page">Produk</a>
         <a href="layanan.html">Layanan</a>
@@ -44,13 +32,9 @@
       </nav>
     </div>
   </header>
-
   <main>
-
-    <!-- ===== HEADER HALAMAN: pita biru muda berisi breadcrumb, judul, deskripsi ===== -->
     <section class="page-header">
       <div class="container">
-        <!-- Breadcrumb = jejak posisi halaman: Beranda / Produk -->
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="Beranda.html">Beranda</a>
           <span>/</span>
@@ -60,68 +44,52 @@
         <p>Eksplorasi ragam olahan susu dari ruang pembelajaran TEFA UHT.</p>
       </div>
     </section>
-
-    <!-- ===== KATALOG: 6 kartu produk (Produk tidak punya sub halaman, jadi tidak ada subnav) ===== -->
     <section class="container catalog">
       <h2>Semua produk</h2>
-
-      <!-- Wadah kartu: 3 kolom dengan CSS Grid -->
       <div class="catalog__grid">
-        <!-- <article> = satu kartu produk yang berdiri sendiri -->
         <article class="product">
-          <div class="img-box product__img"><img src="img/susu-uht-original.jpg" alt="Susu UHT Original"></div>
+          <div class="img-box product__img"><img src="foto/susu ori.jpg" alt="Susu UHT Original"></div>
           <div class="product__body">
-            <!-- Baris kecil: kategori di kiri, ukuran di kanan -->
             <p class="product__meta"><span class="product__cat">Susu</span><span class="product__size">250 ml · contoh</span></p>
             <h3>Susu UHT Original</h3>
             <p class="product__desc">Cita rasa susu yang ringan untuk menemani aktivitas harian.</p>
           </div>
         </article>
-        <!-- <article> = satu kartu produk yang berdiri sendiri -->
         <article class="product">
-          <div class="img-box product__img"><img src="img/susu-cokelat.jpg" alt="Susu Pasteurisasi Cokelat"></div>
+          <div class="img-box product__img"><img src="foto/susu cokelat.jpg" alt="Susu Pasteurisasi Cokelat"></div>
           <div class="product__body">
-            <!-- Baris kecil: kategori di kiri, ukuran di kanan -->
             <p class="product__meta"><span class="product__cat">Susu</span><span class="product__size">250 ml · contoh</span></p>
             <h3>Susu Pasteurisasi Cokelat</h3>
             <p class="product__desc">Perpaduan rasa susu dan cokelat dalam sajian praktis.</p>
           </div>
         </article>
-        <!-- <article> = satu kartu produk yang berdiri sendiri -->
         <article class="product">
-          <div class="img-box product__img"><img src="img/yoghurt-plain.jpg" alt="Yoghurt Plain"></div>
+          <div class="img-box product__img"><img src="foto/susu straw.jpg" alt="Yoghurt Plain"></div>
           <div class="product__body">
-            <!-- Baris kecil: kategori di kiri, ukuran di kanan -->
             <p class="product__meta"><span class="product__cat">Yoghurt</span><span class="product__size">200 ml · contoh</span></p>
             <h3>Yoghurt Plain</h3>
             <p class="product__desc">Rasa asam segar yang cocok dinikmati sendiri atau dengan buah.</p>
           </div>
         </article>
-        <!-- <article> = satu kartu produk yang berdiri sendiri -->
         <article class="product">
-          <div class="img-box product__img"><img src="img/yoghurt-stroberi.jpg" alt="Yoghurt Stroberi"></div>
+          <div class="img-box product__img"><img src="foto/susu putih manis.jpg" alt="Yoghurt Stroberi"></div>
           <div class="product__body">
-            <!-- Baris kecil: kategori di kiri, ukuran di kanan -->
             <p class="product__meta"><span class="product__cat">Yoghurt</span><span class="product__size">200 ml · contoh</span></p>
             <h3>Yoghurt Stroberi</h3>
             <p class="product__desc">Kesegaran yoghurt berpadu dengan rasa buah stroberi.</p>
           </div>
         </article>
-        <!-- <article> = satu kartu produk yang berdiri sendiri -->
         <article class="product">
-          <div class="img-box product__img"><img src="img/keju-mozzarella.jpg" alt="Keju Mozzarella"></div>
+          <div class="img-box product__img"><img src="foto/susu uht.avif" alt="Keju Mozzarella"></div>
           <div class="product__body">
-            <!-- Baris kecil: kategori di kiri, ukuran di kanan -->
             <p class="product__meta"><span class="product__cat">Keju</span><span class="product__size">200 g · contoh</span></p>
             <h3>Keju Mozzarella</h3>
             <p class="product__desc">Tekstur lembut sebagai pelengkap kreasi hidangan Anda.</p>
           </div>
         </article>
-        <!-- <article> = satu kartu produk yang berdiri sendiri -->
         <article class="product">
-          <div class="img-box product__img"><img src="img/es-krim-vanila.jpg" alt="Es Krim Vanila"></div>
+          <div class="img-box product__img"><img src="foto/susu steril.jpeg" alt="Es Krim Vanila"></div>
           <div class="product__body">
-            <!-- Baris kecil: kategori di kiri, ukuran di kanan -->
             <p class="product__meta"><span class="product__cat">Es Krim</span><span class="product__size">100 ml · contoh</span></p>
             <h3>Es Krim Vanila</h3>
             <p class="product__desc">Sajian dingin dengan karakter vanila yang lembut.</p>
@@ -129,8 +97,6 @@
         </article>
       </div>
     </section>
-
-    <!-- ===== CTA: ajakan menghubungi  ===== -->
     <section class="container cta-wrap">
       <div class="cta">
         <div>
@@ -141,8 +107,6 @@
       </div>
     </section>
   </main>
-
-  <!-- ===== FOOTER (sama seperti halaman lain) ===== -->
   <footer class="footer">
     <div class="container footer__grid">
       <div class="footer__brand">
@@ -170,8 +134,6 @@
       © <span id="year">2026</span> TEFA UHT · Politeknik Negeri Jember. Konsep website institusional. Foto dan produk merupakan ilustrasi; informasi contoh ditandai pada halaman terkait.
     </div>
   </footer>
-
-  <!-- Memanggil file JavaScript halaman ini (menu hamburger, tahun, animasi) -->
   <script src="produk.js"></script>
 </body>
 </html>
